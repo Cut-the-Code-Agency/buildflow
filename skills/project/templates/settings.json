@@ -1,0 +1,6 @@
+{
+  "extraKnownMarketplaces": {
+    "cutthecode": { "source": { "source": "github", "repo": "Cut-the-Code-Agency/buildflow" } }
+  },
+  "enabledPlugins": { "buildflow@cutthecode": true }
+}

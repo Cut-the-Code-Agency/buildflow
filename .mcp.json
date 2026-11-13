@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "buildflow": {
+      "type": "http",
+      "url": "${BUILDFLOW_URL:-https://buildflow.cutthecode.com/mcp}",
+      "headers": {
+        "X-Buildflow-Plugin": "0.28.0"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "client": "{{client}}",
+  "production": false,
+  "branching": false,
+  "site": {
+    "id": "{{siteId}}",
+    "name": "{{siteName}}",
+    "domains": [],
+    "stagingDomain": null
+  },
+  "figma": {
+    "source": "mcp",
+    "url": "",
+    "dir": "references/figma/"
+  },
+  "css": {
+    "system": "lumos",
+    "prefix": "",
+    "notes": ""
+  },
+  "library": null,
+  "clickup": {
+    "folderId": "",
+    "feedbackListId": "",
+    "statuses": { "open": "new", "fixed": "in review", "waiting": "forwarded" }
+  },
+  "dumpedAt": "",
+  "references": {
+    "pages": "references/pages.json",
+    "classes": "references/classes.txt",
+    "variables": "references/variables.json",
+    "components": "references/components.json",
+    "fonts": "references/fonts.json",
+    "cms": "references/cms.json",
+    "figma": "references/figma/",
+    "plans": "references/plans/",
+    "log": "references/log.md"
+  },
+  "decisions": "decisions/"
+}

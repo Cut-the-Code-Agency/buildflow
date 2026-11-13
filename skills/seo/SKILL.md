@@ -1,0 +1,13 @@
+---
+name: seo
+description: Set up and check the SEO of a Webflow site — page titles, meta descriptions and Open Graph share images on every static page and CMS template, SEO fields per CMS collection with one share image per item, every locale, noindex on internal pages — and finish with a full SEO audit of the published site: landmark order, one h1 and no skipped headings, no headings in overview cards, robots.txt pagination rules, canonical and Open Graph tags, alt texts and video captions, descriptive and crawlable links, lazy loading and the hero image, fonts, layout shift, and schema.org structured data (Article, FAQPage, Organization, BreadcrumbList, JobPosting). Use when a page or CMS collection is added, when the user asks about SEO, meta titles or descriptions, share images, Open Graph, "what shows on LinkedIn/WhatsApp", noindex, sitemap, robots.txt, headings, alt texts, structured data or schema, Core Web Vitals, an SEO check or audit, before showing a site to the client, and before launch. Requires a client repo (project.json); otherwise run the project skill first.
+---
+
+# seo
+
+The full instructions for this skill live on the Buildflow server. Before doing anything else, call the `buildflow_read` tool with path `skills/seo/SKILL.md` and follow what it returns exactly, as if it were this file.
+
+- Links written as `buildflow://<path>` point to further Buildflow files. Read them with `buildflow_read` (path without the `buildflow://` prefix) whenever the instructions send you there.
+- The loaded texts refer to this plugin's root as CLAUDE_PLUGIN_ROOT (a dollar sign and braces around that name). It is `${CLAUDE_PLUGIN_ROOT}`: scripts, the fixture, templates and hooks are there on disk. Pass this path on wherever the texts say to pass the plugin root.
+- Read a file again with `buildflow_read` rather than reconstructing it from memory.
+- When `buildflow_read` is missing, asks for a login, or refuses, stop and tell the user what it said (setup and account: https://buildflow.cutthecode.com). Do not improvise the workflow without it.

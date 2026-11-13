@@ -1,0 +1,9 @@
+{
+  "name": "buildflow",
+  "version": "0.28.0",
+  "description": "Buildflow: build and change Webflow sites from Figma, a screenshot, a copy document or a brief. Needs an active Buildflow account (https://buildflow.cutthecode.com).",
+  "author": {
+    "name": "Cut The Code"
+  },
+  "homepage": "https://buildflow.cutthecode.com"
+}
