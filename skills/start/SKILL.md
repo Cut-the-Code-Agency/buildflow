@@ -16,7 +16,7 @@ Call the tool ending in `buildflow_status` with plugin `0.28.0`. If that call fa
 - **No such tool, or it asks for a login**:
   - Claude Desktop: "Open **Settings → Connectors → Add custom connector**. Name: **Buildflow**. URL: **https://buildflow.cutthecode.com/mcp**. Click **Add**, then **Connect**, and sign in with the account you use on buildflow.cutthecode.com. Then set **Read-only tools** to **Always allow**. Start a new session in the same folder and say *start buildflow* again." A new connector only reaches new sessions.
   - Terminal: run `claude mcp add --scope user --transport http buildflow https://buildflow.cutthecode.com/mcp --header "X-Buildflow-Plugin: 0.28.0"` yourself, then: "Type **/mcp**, choose **buildflow**, choose **Authenticate** and sign in." Check again after.
-- **Account pending or revoked**: "Your account is not active yet. Cut The Code activates it; check https://buildflow.cutthecode.com/dashboard." Stop here.
+- **Account pending or revoked**: "Your account is not active yet. Cut the Code activates it; check https://buildflow.cutthecode.com/dashboard." Stop here.
 - **Active**: one line ("Buildflow: <account>, active") and go on.
 
 ## 2. Webflow

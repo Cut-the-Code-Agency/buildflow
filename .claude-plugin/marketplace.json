@@ -1,9 +1,9 @@
 {
   "name": "cutthecode",
   "owner": {
-    "name": "Cut The Code"
+    "name": "Cut the Code"
   },
-  "description": "Buildflow by Cut The Code, for clients.",
+  "description": "Buildflow by Cut the Code, for clients.",
   "plugins": [
     {
       "name": "buildflow",
