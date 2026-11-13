@@ -9,7 +9,7 @@
     ],
     "PreToolUse": [
       {
-        "matcher": "mcp__(plugin_[a-z-]+_|claude_ai_)?[Ww]ebflow__data_(style_tool|element_tool|element_builder|element_settings_tool|component_tool|component_props_tool|component_variants_tool|variable_tool|scripts_tool)",
+        "matcher": "mcp__.+__data_(style_tool|element_tool|element_builder|element_settings_tool|component_tool|component_props_tool|component_variants_tool|variable_tool|scripts_tool)",
         "hooks": [
           { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\"" }
         ]
@@ -17,7 +17,7 @@
     ],
     "PostToolUse": [
       {
-        "matcher": "mcp__(plugin_[a-z-]+_|claude_ai_)?[Ww]ebflow__data_(element_tool|element_builder|component_builder|whtml_builder)",
+        "matcher": "mcp__.+__data_(element_tool|element_builder|component_builder|whtml_builder)",
         "hooks": [
           { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/library-site.py\"" }
         ]

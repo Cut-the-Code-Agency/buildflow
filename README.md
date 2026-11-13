@@ -6,20 +6,7 @@ This plugin carries what runs on your machine: hooks, the builder agent, scripts
 
 ## Install
 
-Sign in at https://buildflow.cutthecode.com, then:
-
-```
-curl -fsSL https://buildflow.cutthecode.com/install | sh
-```
-
-or by hand:
-
-```
-claude plugin marketplace add Cut-the-Code-Agency/buildflow
-claude plugin install buildflow@cutthecode
-```
-
-Connect the Webflow and Figma MCP servers yourself (the portal shows the commands), then run `/buildflow:project` in an empty folder for each site.
+Sign in at https://buildflow.cutthecode.com: the dashboard walks you through it, in Claude Desktop (no terminal) or in a terminal. Then say **start buildflow** in Claude: the `buildflow:start` skill checks the Buildflow login, Webflow, Figma and this computer one step at a time, and sets up the folder for your site.
 
 How it works, what is stored where, and how updates reach you: https://buildflow.cutthecode.com/hoe-het-werkt
 
