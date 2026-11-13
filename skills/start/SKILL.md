@@ -11,7 +11,7 @@ First find out where this runs: `echo $CLAUDE_CODE_ENTRYPOINT`. `cli` means a te
 
 ## 1. Buildflow
 
-Call the tool ending in `buildflow_status` with plugin `0.28.0`.
+Call the tool ending in `buildflow_status` with plugin `0.28.0`. If that call fails, call it once more without `plugin` (an app that connected before that argument existed rejects it) before deciding anything.
 
 - **No such tool, or it asks for a login**:
   - Claude Desktop: "Open **Settings → Connectors → Add custom connector**. Name: **Buildflow**. URL: **https://buildflow.cutthecode.com/mcp**. Click **Add**, then **Connect**, and sign in with the account you use on buildflow.cutthecode.com. Then set **Read-only tools** to **Always allow**. Start a new session in the same folder and say *start buildflow* again." A new connector only reaches new sessions.
