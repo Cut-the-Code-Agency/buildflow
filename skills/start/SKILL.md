@@ -26,11 +26,11 @@ Look for a tool ending in `data_sites_tool`.
 - **Missing**:
   - Claude Desktop: "Open **Settings → Connectors**, search **Webflow**, click **Connect** and sign in to Webflow. Start a new session and say *start buildflow* again."
   - Terminal: run `claude mcp add --scope user --transport http webflow https://mcp.webflow.com/mcp`, then: "Type **/mcp**, choose **webflow**, **Authenticate**."
-- **Present**: list the sites the user can reach (one call) and go on.
+- **Present**: list the sites the user can reach (one call), then call the `buildflow_status` tool again with plugin `0.28.0` and `webflow: true` (this ticks the Webflow step on the user's dashboard), and go on.
 
 ## 3. Figma (only for building from a Figma design)
 
-Look for a tool whose name contains `figma` (for example ending in `get_design_context` or `get_metadata`). Missing: ask whether they work from Figma designs. Yes → Claude Desktop: Settings → Connectors → **Figma** → Connect; terminal: `claude mcp add --scope user --transport http figma https://mcp.figma.com/mcp`, then /mcp → figma → Authenticate. No → skip.
+Look for a tool whose name contains `figma` (for example ending in `get_design_context` or `get_metadata`). Present: call `buildflow_status` with plugin `0.28.0` and `figma: true` (ticks the Figma step on the dashboard). Missing: ask whether they want to rebuild designs from Figma; Webflow alone is enough for everything else. Yes → Claude Desktop: Settings → Connectors → **Figma** → Connect; terminal: `claude mcp add --scope user --transport http figma https://mcp.figma.com/mcp`, then /mcp → figma → Authenticate. No → skip.
 
 ## 4. This computer
 
