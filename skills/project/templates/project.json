@@ -5,6 +5,7 @@
   "site": {
     "id": "{{siteId}}",
     "name": "{{siteName}}",
+    "shortName": "",
     "domains": [],
     "stagingDomain": null
   },

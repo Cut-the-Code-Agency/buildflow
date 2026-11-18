@@ -1,6 +1,6 @@
 # Buildflow by Cut the Code (client plugin)
 
-Version 0.28.0. Build and change Webflow sites with Claude Code, the way Cut the Code does.
+Version 0.29.0. Build and change Webflow sites with Claude Code, the way Cut the Code does.
 
 This plugin carries what runs on your machine: hooks, the builder agent, scripts, the measuring fixture and the project templates. The instructions themselves are loaded from Buildflow server while you work, so you need an active account.
 
