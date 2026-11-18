@@ -41,11 +41,11 @@ Check quietly: `python3 --version`, `node --version`, and whether Google Chrome 
 
 ## 5. The folder for the site
 
-Every site gets its own folder; this session's folder is where the project goes.
+Every site gets its own folder. The user never makes it: you do.
 
 - Folder empty or new: run the `buildflow:project` skill here.
-- Folder already holds a Buildflow project (`project.json`): say which site it is and stop; the setup is done.
-- Folder holds other things: Claude Desktop: "Make a new folder for this site (for example in Documents), choose it with the folder button at the bottom of a new session, and say *start buildflow* there." Terminal: make `~/Buildflow/<site-name>`, tell the user to `cd` there and start `claude` again.
+- Folder already holds a Buildflow project (`project.json`): say which site it is. If the user wants another site, go on as below; otherwise stop, the setup is done.
+- Folder holds other things, or the user wants another site: ask which Webflow site (list them with the Webflow tools), make `~/Buildflow/<site-name>` (lowercase, dashes) and run the `buildflow:project` skill with that folder as the project folder: every path it writes is inside it. Then tell the user, once, where to work from now on. Claude Desktop: "Next time, choose the folder *Buildflow › <site-name>* with the folder button at the bottom of a new session." Terminal: `cd ~/Buildflow/<site-name> && claude`.
 
 ## 6. Done
 
