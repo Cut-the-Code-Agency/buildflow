@@ -43,6 +43,7 @@ Check quietly: `python3 --version`, `node --version`, and whether Google Chrome 
 
 Every site gets its own folder. The user never makes it: you do.
 
+- Buildflow is in beta and works mainly for sites on Lumos (Client-First follows in December). When the user starts a new site from scratch, have them clone Lumos V2 into their Webflow workspace first (https://webflow.com/made-in-webflow/website/lumos-v2-beta: *Clone in Webflow*, pick the workspace) and use that clone as the site. An existing site not on Lumos: say plainly that Buildflow follows its naming but the button, card and navigation skills assume Lumos.
 - Folder empty or new: run the `buildflow:project` skill here.
 - Folder already holds a Buildflow project (`project.json`): say which site it is. If the user wants another site, go on as below; otherwise stop, the setup is done.
 - Folder holds other things, or the user wants another site: ask which Webflow site (list them with the Webflow tools), make `~/Buildflow/<site-name>` (lowercase, dashes) and run the `buildflow:project` skill with that folder as the project folder: every path it writes is inside it. Then tell the user, once, where to work from now on. Claude Desktop: "Next time, choose the folder *Buildflow › <site-name>* with the folder button at the bottom of a new session." Terminal: `cd ~/Buildflow/<site-name> && claude`.
