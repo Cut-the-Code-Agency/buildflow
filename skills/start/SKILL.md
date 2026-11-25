@@ -11,11 +11,11 @@ First find out where this runs: `echo $CLAUDE_CODE_ENTRYPOINT`. `cli` means a te
 
 ## 1. Buildflow
 
-Call the tool ending in `buildflow_status` with plugin `0.30.0`. If that call fails, call it once more without `plugin` (an app that connected before that argument existed rejects it) before deciding anything.
+Call the tool ending in `buildflow_status` with plugin `0.30.1`. If that call fails, call it once more without `plugin` (an app that connected before that argument existed rejects it) before deciding anything.
 
 - **No such tool, or it asks for a login**:
   - Claude Desktop: "Click **+** in the chat box, then **Connectors → Add connector → Add custom connector**. Name: **Buildflow**. URL: **https://buildflow.cutthecode.com/mcp**. Leave the rest as it is: Authentication **Sign in now** and OAuth client **Register automatically** (both marked *Detected*), Request headers and Advanced empty. Click **Add**, then **Connect**, and sign in with the account you use on buildflow.cutthecode.com. Then set **Read-only tools** to **Always allow**. Start a new session in the same folder and say *start buildflow* again." A new connector only reaches new sessions.
-  - Terminal: run `claude mcp add --scope user --transport http buildflow https://buildflow.cutthecode.com/mcp --header "X-Buildflow-Plugin: 0.30.0"` yourself, then: "Type **/mcp**, choose **buildflow**, choose **Authenticate** and sign in." Check again after.
+  - Terminal: run `claude mcp add --scope user --transport http buildflow https://buildflow.cutthecode.com/mcp --header "X-Buildflow-Plugin: 0.30.1"` yourself, then: "Type **/mcp**, choose **buildflow**, choose **Authenticate** and sign in." Check again after.
 - **Account pending or revoked**: "Your account is not active yet. Cut the Code activates it; check https://buildflow.cutthecode.com/dashboard." Stop here.
 - **Active**: one line ("Buildflow: <account>, active") and go on.
 
@@ -26,11 +26,11 @@ Look for a tool ending in `data_sites_tool`.
 - **Missing**:
   - Claude Desktop: "Click **+** in the chat box, then **Connectors → Add connector**, search **Webflow**, click **Connect** and sign in to Webflow. Start a new session and say *start buildflow* again."
   - Terminal: run `claude mcp add --scope user --transport http webflow https://mcp.webflow.com/mcp`, then: "Type **/mcp**, choose **webflow**, **Authenticate**."
-- **Present**: list the sites the user can reach (one call), then call the `buildflow_status` tool again with plugin `0.30.0` and `webflow: true` (this ticks the Webflow step on the user's dashboard), and go on.
+- **Present**: list the sites the user can reach (one call), then call the `buildflow_status` tool again with plugin `0.30.1` and `webflow: true` (this ticks the Webflow step on the user's dashboard), and go on.
 
 ## 3. Figma (only for building from a Figma design)
 
-Look for a tool whose name contains `figma` (for example ending in `get_design_context` or `get_metadata`). Present: call `buildflow_status` with plugin `0.30.0` and `figma: true` (ticks the Figma step on the dashboard). Missing: ask whether they want to rebuild designs from Figma; Webflow alone is enough for everything else. Yes → Claude Desktop: **+** in the chat box → Connectors → Add connector → **Figma** → Connect; terminal: `claude mcp add --scope user --transport http figma https://mcp.figma.com/mcp`, then /mcp → figma → Authenticate. No → skip.
+Look for a tool whose name contains `figma` (for example ending in `get_design_context` or `get_metadata`). Present: call `buildflow_status` with plugin `0.30.1` and `figma: true` (ticks the Figma step on the dashboard). Missing: ask whether they want to rebuild designs from Figma; Webflow alone is enough for everything else. Yes → Claude Desktop: **+** in the chat box → Connectors → Add connector → **Figma** → Connect; terminal: `claude mcp add --scope user --transport http figma https://mcp.figma.com/mcp`, then /mcp → figma → Authenticate. No → skip.
 
 ## 4. This computer
 
