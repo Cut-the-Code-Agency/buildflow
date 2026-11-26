@@ -2,5 +2,9 @@
   "extraKnownMarketplaces": {
     "cutthecode": { "source": { "source": "github", "repo": "Cut-the-Code-Agency/buildflow" } }
   },
-  "enabledPlugins": { "buildflow@cutthecode": true }
+  "enabledPlugins": { "buildflow@cutthecode": true },
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": ["mcp__webflow", "mcp__claude_ai_Webflow", "mcp__figma", "mcp__claude_ai_Figma", "mcp__buildflow", "mcp__claude_ai_Buildflow"]
+  }
 }
